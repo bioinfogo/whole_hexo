@@ -92,3 +92,33 @@ hexo clean
 hexo deploy -g
 ```
 
+## 报错系列
+### deployer not found: git
+有两种可能：
+* 在yml 的配置文件中，deploy部分，git的冒号之后没有加一个空格
+* 没有安装hexo-deployer-git
+
+针对第二个错误，可以：
+```
+npm install hexo-deployer-git --save
+```
+即可。
+### Cannot find module 'hexo-util'
+此类错误一般是由于对应模块没有安装导致的，安装即可：
+```
+npm install -- save-dev hexo-util
+```
+### remote origin already exists
+这是由于在Github 上，已经存在origin 的信息，删除重新生成即可：
+```
+#删除
+git remote rm origin
+#重新生成
+git remote add origin git@github.com:yourname/yourname.git
+```
+### Filename too long，无法index
+设置git 的config即可：
+```
+git config --global core.longpaths true
+```
+
