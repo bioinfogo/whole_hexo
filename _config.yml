@@ -77,11 +77,4 @@ deploy:
 # photo
 avatar: /uploads/avatar.png
 
-
-#backup:
-backup:
-    type: git
-    theme: next,landscape
-    repository:
-       github: git@github.com:bioinfogo/bioinfogo.io.git,hexo
 	   
