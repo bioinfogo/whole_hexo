@@ -42,10 +42,11 @@ hexo init
 ```
 ## 多终端的配置
 如果想要在不同的终端都可以编写blog并上传，可以在多台电脑上配置git和node.js 等。
-原理是：在第一台电脑上上传网站源代码到github 上，然后在各个电脑上克隆代码，修改之后渲染上传，然后将源代码再次保存在github上即可。
-[方法](http://zhangnai.xin/2016/10/11/create-a-new-blog-dir/)
-对于source，theme等文件夹，采用单独保存到一个repo 的方式进行。
-也可以http://sufaith.com/2016/02/27/Hexo%E8%BF%81%E7%A7%BB/
+原理是：在第一台电脑上上传网站源代码到github 的另外一个repo上，然后在各个电脑上克隆代码，修改之后，将源代码再次保存在github上。
+同时将修改后的网站，再次生成和上传。
+中间遇到很多问题，最终采用了[Hexo 换终端/换电脑小记](http://wangmuduo.com/2016/04/02/hexo-change-os/)的教程。
+具体来说，对于source，theme等文件夹以及yml等配置文件，采用单独保存到一个repo 的方式进行保存。
+
 
 
 ## 注意事项
